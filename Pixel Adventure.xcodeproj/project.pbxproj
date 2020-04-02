@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		27951DB1243668C80010E095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27951DB0243668C80010E095 /* AppDelegate.swift */; };
-		27951DB3243668C80010E095 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 27951DB2243668C80010E095 /* GameScene.sks */; };
-		27951DB5243668C80010E095 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 27951DB4243668C80010E095 /* Actions.sks */; };
 		27951DB7243668C80010E095 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27951DB6243668C80010E095 /* GameScene.swift */; };
-		27951DB9243668C80010E095 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27951DB8243668C80010E095 /* GameViewController.swift */; };
+		27951DB9243668C80010E095 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27951DB8243668C80010E095 /* GameView.swift */; };
 		27951DBC243668C80010E095 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27951DBA243668C80010E095 /* Main.storyboard */; };
 		27951DBE243668C90010E095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27951DBD243668C90010E095 /* Assets.xcassets */; };
 		27951DC1243668C90010E095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27951DBF243668C90010E095 /* LaunchScreen.storyboard */; };
@@ -20,10 +18,8 @@
 /* Begin PBXFileReference section */
 		27951DAD243668C80010E095 /* Pixel Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pixel Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27951DB0243668C80010E095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27951DB2243668C80010E095 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		27951DB4243668C80010E095 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		27951DB6243668C80010E095 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		27951DB8243668C80010E095 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		27951DB8243668C80010E095 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		27951DBB243668C80010E095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27951DBD243668C90010E095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27951DC0243668C90010E095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,16 +57,38 @@
 			isa = PBXGroup;
 			children = (
 				27951DB0243668C80010E095 /* AppDelegate.swift */,
-				27951DB2243668C80010E095 /* GameScene.sks */,
-				27951DB4243668C80010E095 /* Actions.sks */,
-				27951DB6243668C80010E095 /* GameScene.swift */,
-				27951DB8243668C80010E095 /* GameViewController.swift */,
+				27951DCB243682D50010E095 /* Sprites */,
+				27951DC9243682C20010E095 /* Scenes */,
+				27951DC8243682B70010E095 /* Views */,
 				27951DBA243668C80010E095 /* Main.storyboard */,
 				27951DBD243668C90010E095 /* Assets.xcassets */,
 				27951DBF243668C90010E095 /* LaunchScreen.storyboard */,
 				27951DC2243668C90010E095 /* Info.plist */,
 			);
 			path = "Pixel Adventure";
+			sourceTree = "<group>";
+		};
+		27951DC8243682B70010E095 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27951DB8243668C80010E095 /* GameView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		27951DC9243682C20010E095 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				27951DB6243668C80010E095 /* GameScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		27951DCB243682D50010E095 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sprites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,10 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27951DBC243668C80010E095 /* Main.storyboard in Resources */,
-				27951DB3243668C80010E095 /* GameScene.sks in Resources */,
 				27951DBE243668C90010E095 /* Assets.xcassets in Resources */,
 				27951DC1243668C90010E095 /* LaunchScreen.storyboard in Resources */,
-				27951DB5243668C80010E095 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27951DB7243668C80010E095 /* GameScene.swift in Sources */,
-				27951DB9243668C80010E095 /* GameViewController.swift in Sources */,
+				27951DB9243668C80010E095 /* GameView.swift in Sources */,
 				27951DB1243668C80010E095 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowdentech.Pixel-Adventure";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,7 +336,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lowdentech.Pixel-Adventure";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
